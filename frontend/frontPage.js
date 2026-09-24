@@ -55,6 +55,10 @@ function createWeekBoxes() {
     const weeksGrid = document.querySelector("#weeksGrid")
     document.querySelector("#weeksHeader").textContent = "Hver fyldt kasse repræsenterer en uge, du har levet, mens de hvide kasser viser de uger, du estimeres at have tilbage"
 
+    if (weeksLived == undefined || weeksLeft == undefined) {
+        return
+    }
+
     weeksGrid.innerHTML = ""
     for (let i = 0; i < weeksLived; i++) {
         const week = document.createElement("div")
