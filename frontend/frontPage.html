@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dit liv i uger</title>
+    <link rel="stylesheet" href="frontPage.css">
+</head>
+<body>
+    <h1>Dit liv i uger</h1>
+    <p>Denne hjemmeside beregner og visualiserer, hvor meget tid du har levet, og hvor meget tid du har tilbage ud fra gennemsnitsalderen i et specifikt land.</p>
+
+    <main>
+        <div id="userInputForm">
+            <p>Fødselsdag</p>
+            <input id="dateOfBirth" type="date">
+
+            <p>Køn</p>
+            <select id="gender">
+                <option value="male">Mand</option>
+                <option value="female">Kvinde</option>
+            </select>
+
+            <p>Land</p>
+            <select id="country">
+                <option value="Denmark">Denmark</option>
+            </select> 
+
+            <div>
+                <button id="calculateBtn">Beregn</button>
+            </div>
+        </div>
+
+        <div id="result">
+            <h3 id="livedHeader"></h3>
+            <div id="timeLivedList">
+                <ul>
+                    <li id="yearsLived"> </li>
+                    <li id="weeksLived"> </li>
+                    <li id="daysLived"> </li>
+                    <li id="hoursLived"> </li>
+                    <li id="minutesLived"> </li>
+                    <li id="secondsLived"> </li>
+                </ul>
+            </div>
+
+            
+            <h3 id="remainingHeader"></h3>
+            <div id="timeLeftList">
+                 <ul>
+                    <li id="yearsLeft"> </li>
+                    <li id="weeksLeft"> </li>
+                    <li id="daysLeft"> </li>
+                    <li id="hoursLeft"> </li>
+                    <li id="minutesLeft"> </li>
+                    <li id="secondsLeft"> </li>
+                </ul>
+            </div>
+
+            <h3 id="weeksHeader"></h3>
+            <div id="weeksGrid"></div>
+           
+         </div>
+         
+    </main>
+
+
+
+    <script src="frontPage.js"></script>
+</body>
+</html>

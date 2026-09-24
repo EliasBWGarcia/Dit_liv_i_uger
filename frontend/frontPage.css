@@ -1,0 +1,58 @@
+* {
+    background-color: rgb(218, 229, 239);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+#userInputForm div {
+    margin-top: 10px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-top: 3px;
+}
+
+#weeksGrid {
+    display: grid;
+    grid-template-columns: repeat(52, 8px);
+    gap: 2px;
+}
+
+.weekBox {
+    height: 8px;
+    border: 1px solid black;
+}
+
+.weekLived {
+    background-color: black;
+}
+
+.weekLeft {
+    background-color: white;
+}
