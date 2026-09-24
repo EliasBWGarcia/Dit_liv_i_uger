@@ -5,10 +5,8 @@ btn.addEventListener("click", () => {
     const dateOfBirth = document.querySelector("#dateOfBirth").value
     const gender = document.querySelector("#gender").value
     const country = document.querySelector("#country").value
-
-    console.log(dateOfBirth);
-    console.log(gender);
-    console.log(country);
+    weeksLived = undefined
+    weeksLeft = undefined
 
     fetch(`/api/time-lived/${dateOfBirth}`)
         .then(response => response.json())
@@ -57,6 +55,7 @@ function createWeekBoxes() {
     const weeksGrid = document.querySelector("#weeksGrid")
     document.querySelector("#weeksHeader").textContent = "Hver fyldt kasse repræsenterer en uge, du har levet, mens de hvide kasser viser de uger, du estimeres at have tilbage"
 
+    weeksGrid.innerHTML = ""
     for (let i = 0; i < weeksLived; i++) {
         const week = document.createElement("div")
         week.classList.add("weekBox")
